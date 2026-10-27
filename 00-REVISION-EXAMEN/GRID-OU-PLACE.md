@@ -51,6 +51,14 @@ Pour ne pas improviser les chiffres, planifie la largeur avant de coder. Deux ca
 
 Exemple complet : [gabarits/05_fenetre_place.py](gabarits/05_fenetre_place.py) et le corrigé [cours11_reservation_place/view.py](exercices-corriges/cours11_reservation_place/view.py).
 
+Pour une grosse fenêtre, regarde [formatif-pratique/corrige/app_place.py](formatif-pratique/corrige/app_place.py). C'est la même application que `app.py`, mais chaque widget est posé avec `place()` ; seule la construction des widgets change. Tu peux comparer les deux fichiers méthode par méthode. Trois trucs y reviennent :
+
+- **Chaque zone est un frame placé dans la fenêtre**, et ses widgets sont placés en fractions du frame. Tu raisonnes sur une petite boîte à la fois plutôt que sur toute la fenêtre.
+- **Libellé et champ sur la même ligne** : libellé avec `anchor="e"` à `relx=0.14`, champ avec `anchor="w"` à `relx=0.15`. Le deux-points du libellé finit toujours au même endroit, peu importe la longueur du texte.
+- **Une rangée de boutons de même largeur** : `relx=0.005 + i * 0.25, relwidth=0.24` dans une boucle.
+
+Le défaut de `place` : quand la fenêtre rapetisse, les widgets se rapprochent jusqu'à se chevaucher. Mets un `minsize()` sur la fenêtre.
+
 ## Et pack ?
 
 Tu peux l'oublier, avec une seule règle à retenir : **ne mélange jamais pack et grid dans le même conteneur**. Tkinter plante avec `cannot use geometry manager grid inside . which already has slaves managed by pack`. Des frames différents peuvent utiliser des gestionnaires différents.

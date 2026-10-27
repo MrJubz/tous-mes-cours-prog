@@ -37,7 +37,7 @@ Mes notes, mes gabarits et mes exercices corrigés, à ouvrir et copier pendant 
 └── formatif-pratique/      ← un formatif plus gros que celui du prof, pour t'entraîner
     ├── ENONCE.pdf / ENONCE.md        l'énoncé avec l'image de la fenêtre attendue
     ├── donnees/                      un JSON valide et un CSV plein d'erreurs pour tester l'import
-    └── corrige/                      model.py + app.py
+    └── corrige/                      model.py + app.py (grid) + app_place.py (place)
 ```
 
 Pour t'entraîner avant l'examen, fais le [formatif de pratique](formatif-pratique/ENONCE.md) sans regarder le corrigé. Il reprend le formatif du cours 15 et ajoute l'héritage, les méthodes magiques, NumPy, la validation au clavier, la recherche, le tri et un graphique.
