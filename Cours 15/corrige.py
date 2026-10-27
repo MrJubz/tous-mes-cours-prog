@@ -158,7 +158,7 @@ class ProductManagerApp(tk.Tk):
         selected = self.tree.selection()
 
         if not selected:
-            messagebox.showwarning("selection obligatoire", "Merci de choisir un produit à supprimer")
+            messagebox.showwarning("selection requise", "Merci de choisir un produit à modifier")
             return
         item = selected[0]
         values = self.tree.item(item, "values")
@@ -179,16 +179,72 @@ class ProductManagerApp(tk.Tk):
         self.tree.delete(item)
 
     def sauvegarder_csv(self):
-        pass
+        filepath = filedialog.asksaveasfilename(defaultextension=".csv", filetypes=[("CSV", "*.csv")])
+        if not filepath:
+            return
+        with open(filepath, mode = "w", newline = "", encoding='utf-8') as file:
+            writer = csv.writer(file)
+            writer.writerow(self.columns)
+
+            for produit in self.produits:
+                writer.writerow([produit.nom, produit.quantite, produit.prix])
+        messagebox.showinfo("sauvegarde", "les produits sont enregistrés dans un fichier csv")
 
     def sauvegarder_json(self):
-        pass
+        filepath = filedialog.asksaveasfilename(defaultextension=".json", filetypes=[("JSON", "*.json")])
+        if not filepath:
+            return
+
+        data = []
+
+        for produit in self.produits:
+            data.append(produit.to_dict())
+
+        with open(filepath, mode = "w", newline = "", encoding='utf-8') as file:
+            json.dump(data, file, indent=4)
+
+        messagebox.showinfo("sauvegarde", "les produits sont enregistrés dans un fichier json")
 
     def importer_csv(self):
-        pass
+        filepath = filedialog.askopenfilename(filetypes=[("CSV", "*.csv")])
+        if not filepath:
+            return
+
+        try:
+            with open(filepath, mode = "r", newline='', encoding='utf-8') as file:
+                reader = csv.DictReader(file)
+                for row in reader:
+                    produit = Produit(row["name"], row["quantity"], row["price"])
+                    self.produits.append(produit)
+                    self.tree.insert("", "end", values=(produit.nom, produit.quantite, produit.prix))
+
+                messagebox.showinfo("importation", "les produits sont importés avec succé")
+
+        except Exception as e:
+            messagebox.showerror("Erreur", str(e))
+
 
     def importer_json(self):
-        pass
+        filepath = filedialog.askopenfilename(filetypes=[("JSON", "*.json")])
+        if not filepath:
+            return
+
+        try:
+            with open(filepath, mode = "r", newline='', encoding='utf-8') as file:
+                data = json.load(file)
+
+            if not isinstance(data, list):
+                messagebox.showerror("Erreur", "le fichier json doit contenir une liste d'objets")
+                return
+
+            for item in data:
+                produit = Produit(item["name"], item["quantity"], item["price"])
+
+                self.produits.append(produit)
+                self.tree.insert("", "end", values=(produit.nom, produit.quantite, produit.prix))
+            messagebox.showinfo("importation", "es produits sont importés avec succé")
+        except Exception as e:
+            messagebox.showerror("Erreur", str(e))
 
 
 
