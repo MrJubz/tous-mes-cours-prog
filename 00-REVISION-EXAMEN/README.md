@@ -21,6 +21,7 @@ Mes notes, mes gabarits et mes exercices corrigés, à ouvrir et copier pendant 
 ├── GRID-OU-PLACE.md        ← lequel choisir, comment bien s'en servir
 ├── AIDE-MEMOIRE.md         ← toute la syntaxe, cours 1 à 15
 ├── CORRECTIONS.md          ← ce qui clochait dans tes exercices
+├── STR-ET-REPR.md          ← __str__ ou __repr__, et le !r dans un f-string
 ├── gabarits/               ← points de départ génériques, à copier
 │   ├── 01_classe_modele.py           @property, validation, __str__, __lt__, to_dict
 │   ├── 02_heritage_polymorphisme.py  super(), multi-niveaux, multiple, redéfinition

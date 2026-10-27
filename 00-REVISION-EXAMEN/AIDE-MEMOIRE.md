@@ -49,7 +49,7 @@ Méthodes magiques :
 |---|---|
 | `__init__(self, ...)` | `Classe(...)` |
 | `__str__(self)` | `print(obj)`, `str(obj)`, f-string |
-| `__repr__(self)` | console, affichage dans une liste ; sert aussi de repli si `__str__` n'existe pas |
+| `__repr__(self)` | console, affichage dans une liste ; sert aussi de repli si `__str__` n'existe pas. Le `!r` : [STR-ET-REPR.md](STR-ET-REPR.md) |
 | `__lt__(self, other)` | `a < b`, et donc `sorted()`, `min()`, `max()` |
 | `__gt__`, `__le__`, `__ge__`, `__eq__` | `>`, `<=`, `>=`, `==` |
 | `__add__(self, other)`, `__mul__` | `a + b`, `a * b` |
