@@ -33,8 +33,14 @@ Mes notes, mes gabarits et mes exercices corrigés, à ouvrir et copier pendant 
 │   ├── 09_json_csv.py                lire/écrire + filedialog
 │   ├── 10_matplotlib_dans_tkinter.py Figure + FigureCanvasTkAgg + mise à jour + CSV
 │   └── 11_app_complete/              model.py + app.py : tout ensemble
-└── exercices-corriges/     ← chaque exercice des cours, corrigé et complet
+├── exercices-corriges/     ← chaque exercice des cours, corrigé et complet
+└── formatif-pratique/      ← un formatif plus gros que celui du prof, pour t'entraîner
+    ├── ENONCE.pdf / ENONCE.md        l'énoncé avec l'image de la fenêtre attendue
+    ├── donnees/                      un JSON valide et un CSV plein d'erreurs pour tester l'import
+    └── corrige/                      model.py + app.py
 ```
+
+Pour t'entraîner avant l'examen, fais le [formatif de pratique](formatif-pratique/ENONCE.md) sans regarder le corrigé. Il reprend le formatif du cours 15 et ajoute l'héritage, les méthodes magiques, NumPy, la validation au clavier, la recherche, le tri et un graphique.
 
 Les commentaires dans le code sont courts et placés seulement là où une ligne n'est pas évidente. Les explications longues sont dans les `.md`.
 

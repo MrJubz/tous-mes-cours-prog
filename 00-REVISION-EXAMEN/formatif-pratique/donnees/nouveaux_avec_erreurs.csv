@@ -1,0 +1,10 @@
+type,matricule,nom,programme,tp1,tp2,examen,ancien_examen
+regulier,2420114,Jacob Bélanger,Informatique,78,82,74,
+reprise,2320987,Rosalie Ouellet,Sciences de la nature,65,58,41,67
+regulier,2420339,Mia Lévesque,Sciences humaines,105,80,70,
+regulier,242055,Nathan Girard,Informatique,70,70,70,
+regulier,2420771,Florence Paquette,Arts visuels,80,85,90,
+regulier,2412034,Léa Tremblay,Informatique,92,88,85,
+reprise,2321448,Arthur Caron,Informatique,50,62,55,
+regulier,2420902,,Sciences humaines,60,60,60,
+regulier,2421016,Victor Demers,Sciences de la nature,"72,5",68,77,

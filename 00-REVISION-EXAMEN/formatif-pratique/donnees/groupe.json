@@ -1,0 +1,12 @@
+[
+    {"type": "regulier", "matricule": "2412034", "nom": "Léa Tremblay", "programme": "Informatique", "tp1": 92, "tp2": 88, "examen": 85},
+    {"type": "regulier", "matricule": "2410587", "nom": "Samuel Gagnon", "programme": "Informatique", "tp1": 70, "tp2": 64, "examen": 58},
+    {"type": "reprise", "matricule": "2311902", "nom": "Noah Roy", "programme": "Informatique", "tp1": 75, "tp2": 70, "examen": 48, "ancien_examen": 62},
+    {"type": "regulier", "matricule": "2415220", "nom": "Chloé Bouchard", "programme": "Sciences de la nature", "tp1": 95, "tp2": 91, "examen": 94},
+    {"type": "regulier", "matricule": "2413318", "nom": "William Côté", "programme": "Sciences de la nature", "tp1": 55, "tp2": 40, "examen": 47},
+    {"type": "regulier", "matricule": "2416641", "nom": "Emma Gauthier", "programme": "Sciences de la nature", "tp1": 81, "tp2": 77, "examen": 72},
+    {"type": "reprise", "matricule": "2314476", "nom": "Félix Morin", "programme": "Sciences humaines", "tp1": 60, "tp2": 52, "examen": 45, "ancien_examen": 51},
+    {"type": "regulier", "matricule": "2417093", "nom": "Alice Lavoie", "programme": "Sciences humaines", "tp1": 88, "tp2": 79, "examen": 66},
+    {"type": "regulier", "matricule": "2418755", "nom": "Thomas Fortin", "programme": "Sciences humaines", "tp1": 68, "tp2": 73, "examen": 61},
+    {"type": "regulier", "matricule": "2419310", "nom": "Zoé Pelletier", "programme": "Informatique", "tp1": 100, "tp2": 96, "examen": 89}
+]
